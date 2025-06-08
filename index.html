@@ -1,653 +1,793 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Naveenkumar Kalluri - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="bg-animation"></div>
-    
+
     <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <div class="logo"><span class="highlight">Kalluri</span></div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#resume" class="nav-link">Resume</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <div class="theme-toggle-container">
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-sun theme-icon-light"></i>
-                        <i class="fas fa-moon theme-icon-dark"></i>
-                    </button>
-                    <span class="theme-tooltip">Switch to dark/light mode</span>
-                </div>
-                <div class="mobile-menu" id="mobileMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+      <div class="nav-container">
+        <div class="logo"><span class="highlight">Kalluri</span></div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+          <div class="theme-toggle-container">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle dark mode"
+            >
+              <i class="fas fa-sun theme-icon-light"></i>
+              <i class="fas fa-moon theme-icon-dark"></i>
+            </button>
+            <span class="theme-tooltip">Switch to dark/light mode</span>
+          </div>
+          <div class="mobile-menu" id="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Home Section -->
     <section id="home">
-        <div class="container">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>Naveenkumar Kalluri</h1>
-                    <p class="hero-subtitle">Software Developer & DevOps Engineer</p>
-                    <p class="hero-description">
-                        Passionate about creating robust solutions using Java, Python, and SQL. 
-                        Experienced Platform Engineer with expertise in DevOps practices and cloud technologies.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">170+</span>
-                            <span class="stat-label">Leetcode Problems</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Git Repositories</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Team Projects</span>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="cta-button primary">Get In Touch</a>
-                        <a href="#projects" class="cta-button secondary">View Projects</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-card">
-                        <div class="profile-img">
-                            <img src="assets/profile.jpg" alt="Naveenkumar Kalluri" class="profile-photo" />
-                        </div>
-                        <div class="profile-info">
-                            <h3>Naveenkumar Kalluri</h3>
-                            <p>Software Developer</p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="hero">
+          <div class="hero-content">
+            <h1>Naveenkumar Kalluri</h1>
+            <p class="hero-subtitle">Software Developer</p>
+            <p class="hero-description">
+              I am Software Developer skilled in Java, Python, and SQL with
+              hands-on experience in DevOps and backend automation. Currently
+              working at Ellucian, building integration solutions for higher
+              education. Previously interned at Practo, streamlining database
+              operations and managing Kubernetes workloads. Passionate about
+              creating efficient, scalable systems and continuously learning
+              emerging technologies.
+            </p>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">170+</span>
+                <span class="stat-label">Leetcode Problems</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Git Repositories</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Team Projects</span>
+              </div>
             </div>
+            <div class="hero-buttons">
+              <a href="#contact" class="cta-button primary">Get In Touch</a>
+              <a href="#projects" class="cta-button secondary">View Projects</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <!-- Large background photo (backside) -->
+            <img
+              src="assets/photo.jpg"
+              alt="Naveenkumar Kalluri Large"
+              class="hero-bg-photo"
+            />
+            <div class="profile-card">
+              <div class="profile-img">
+                <img
+                  src="assets/profile.jpg"
+                  alt="Naveenkumar Kalluri"
+                  class="profile-photo"
+                />
+              </div>
+              <div class="profile-info">
+                <h3>Naveenkumar Kalluri</h3>
+                <p>Software Developer</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">
-                        I am Software Developer skilled in Java, Python, and SQL with hands-on experience in DevOps and backend automation. Currently working at Ellucian, building integration solutions for higher education. Previously interned at Practo, streamlining database operations and managing Kubernetes workloads. Passionate about creating efficient, scalable systems and continuously learning emerging technologies.
-                    </p>
-                    <p>
-                        My skills extend beyond development to include automation, continuous integration, and 
-                        deployment using modern DevOps tools and technologies. I am highly adaptable, ready to 
-                        work in dynamic environments, and eager to tackle complex challenges while collaborating 
-                        with dynamic teams to drive innovation.
-                    </p>
-                    
-                    <div class="personal-info">
-                        <div class="info-item">
-                            <i class="fas fa-birthday-cake"></i>
-                            <span><strong>Date of Birth:</strong> 14 Aug 2002</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span><strong>City:</strong> Guntur, Andhra Pradesh</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-calendar"></i>
-                            <span><strong>Age:</strong> 22</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span><strong>Degree:</strong> B.Tech in CSE</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span><strong>Email:</strong> 
-                                <a href="mailto:naveenkumarkalluri341@gmail.com" class="contact-link">
-                                    naveenkumarkalluri341@gmail.com
-                                </a>
-                            </span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <span><strong>Notice Period:</strong> TBA</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-intro"></p>
+            <p>
+              My skills extend beyond development to include automation,
+              continuous integration, and deployment using modern DevOps tools
+              and technologies. I am highly adaptable, ready to work in dynamic
+              environments, and eager to tackle complex challenges while
+              collaborating with dynamic teams to drive innovation.
+            </p>
+
+            <div class="personal-info">
+              <div class="info-item">
+                <i class="fas fa-birthday-cake"></i>
+                <span><strong>Date of Birth:</strong> 14 Aug 2002</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span><strong>City:</strong> Guntur, Andhra Pradesh</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-calendar"></i>
+                <span><strong>Age:</strong> 22</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span><strong>Degree:</strong> B.Tech in CSE</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span
+                  ><strong>Email:</strong>
+                  <a
+                    href="mailto:naveenkumarkalluri341@gmail.com"
+                    class="contact-link"
+                  >
+                    naveenkumarkalluri341@gmail.com
+                  </a>
+                </span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span><strong>Notice Period:</strong> TBA</span>
+              </div>
             </div>
-            
-            <!-- Skills Section -->
-            <div class="skills-section">
-                <div class="skills-category">
-                    <h4>Programming Languages</h4>
-                    <div class="skills-tags">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">JavaScript</span>
-                      
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h4>Web Technologies</h4>
-                    <div class="skills-tags">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h4>Databases</h4>
-                    <div class="skills-tags">
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Oracle</span>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h4>DevOps Tools</h4>
-                    <div class="skills-tags">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">Git</span>
-                    
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h4>Operating Systems</h4>
-                    <div class="skills-tags">
-                        <span class="tech-tag">Linux</span>
-                        <span class="tech-tag">Windows</span>
-                        <span class="tech-tag">macOS</span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Skills Section -->
+        <div class="skills-section">
+          <div class="skills-category">
+            <h4>Programming Languages</h4>
+            <div class="skills-tags">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Web Technologies</h4>
+            <div class="skills-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">Tailwind CSS</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Databases</h4>
+            <div class="skills-tags">
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Oracle</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>DevOps Tools</h4>
+            <div class="skills-tags">
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Kubernetes</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Azure</span>
+              <span class="tech-tag">Git</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h4>Operating Systems</h4>
+            <div class="skills-tags">
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">Windows</span>
+              <span class="tech-tag">macOS</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Resume Section -->
     <section id="resume">
-        <div class="container">
-            <h2 class="section-title">Resume</h2>
-            
-            <div class="resume-summary">
-                <div class="glass-card">
-                    <h3>Professional Summary</h3>
-                    <p>
-                        Highly motivated and detail-oriented software developer with a proven track record in 
-                        developing efficient software solutions. Adept at collaborating with cross-functional 
-                        teams and leveraging DevOps methodologies including AWS cloud services to streamline 
-                        development workflows and ensure seamless product delivery.
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
 
-            <div class="resume-content">
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-briefcase"></i>
-                        Professional Experience
-                    </h3>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="company-logo">
-                            <img src="assets/ellucian-logo.png" alt="Ellucian Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <h4>Integration Engineer</h4>
-                            <div class="company">Ellucian India Pvt Ltd, Bangalore</div>
-                            <div class="duration">2024 - Present</div>
-                            <ul>
-                                <li>Working on integration solutions for higher education institutions, enhancing data interoperability</li>
-                                <li>Developing and maintaining integration solutions for higher education institutions</li>
-                                <li>Collaborating with cross-functional teams to implement scalable integration architectures</li>
-                                <li>Utilizing modern technologies and best practices in enterprise integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="company-logo">
-                            <img src="assets/practo-logo.png" alt="Practo Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <h4>Platform Engineer - Intern</h4>
-                            <p class="company">Practo Technologies</p>
-                            <p class="duration">June 2024 - Oct 2024 | Bangalore, Karnataka, India</p>
-                            <ul>
-                                <li>Managed Kubernetes pods for CronJobs, increasing scalability and reducing downtime by 20%</li>
-                                <li>Automated database management with Azure and Oracle alarms, reducing system downtime by 30%</li>
-                                <li>Developed scripts for alarm automation using Watchdog, improving response times by 50% and cutting manual intervention by half</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="company-logo">
-                            <img src="assets/shaab-logo.png" alt="SHAAB TRIP Logo">
-                        </div>
-                        <div class="timeline-content">
-                            <h4>Web Developer - Intern</h4>
-                            <p class="company">SHAAB TRIP</p>
-                            <p class="duration">June 2022 - Sep 2022 | Remote</p>
-                            <ul>
-                                <li>Developed a responsive website, boosting user engagement by 15% and decreasing bounce rates by 10%</li>
-                                <li>Designed an interactive user interface using HTML, CSS, Bootstrap, and Tailwind CSS, improving user satisfaction based on client feedback</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-graduation-cap"></i>
-                        Education
-                    </h3>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Bachelor of Technology in Computer Science Engineering</h4>
-                            <p class="company">SRM University, Andhra Pradesh, India</p>
-                            <p class="duration">2020 - 2024</p>
-                            <p class="grade">CGPA: 8.65</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="resume-download">
-                <a href="assets/resume.pdf" class="download-btn" download>
-                    <i class="fas fa-download"></i>
-                    Download Resume
-                </a>
-            </div>
+        <div class="resume-summary">
+          <div class="glass-card">
+            <h3>Professional Summary</h3>
+            <p>
+              Highly motivated and detail-oriented software developer with a
+              proven track record in developing efficient software solutions.
+              Adept at collaborating with cross-functional teams and leveraging
+              DevOps methodologies including AWS cloud services to streamline
+              development workflows and ensure seamless product delivery.
+            </p>
+          </div>
         </div>
+
+        <div class="resume-content">
+          <div class="resume-section">
+            <h3 class="resume-section-title">
+              <i class="fas fa-briefcase"></i>
+              Professional Experience
+            </h3>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="company-logo">
+                <img src="assets/ellucian-logo.png" alt="Ellucian Logo" />
+              </div>
+              <div class="timeline-content">
+                <h4>Integration Engineer</h4>
+                <div class="company">Ellucian India Pvt Ltd, Bangalore</div>
+                <div class="duration">2024 - Present</div>
+                <ul>
+                  <li>
+                    Working on integration solutions for higher education
+                    institutions, enhancing data interoperability
+                  </li>
+                  <li>
+                    Developing and maintaining integration solutions for higher
+                    education institutions
+                  </li>
+                  <li>
+                    Collaborating with cross-functional teams to implement
+                    scalable integration architectures
+                  </li>
+                  <li>
+                    Utilizing modern technologies and best practices in
+                    enterprise integration
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="company-logo">
+                <img src="assets/practo-logo.png" alt="Practo Logo" />
+              </div>
+              <div class="timeline-content">
+                <h4>Platform Engineer - Intern</h4>
+                <p class="company">Practo Technologies</p>
+                <p class="duration">
+                  June 2024 - Oct 2024 | Bangalore, Karnataka, India
+                </p>
+                <ul>
+                  <li>
+                    Managed Kubernetes pods for CronJobs, increasing scalability
+                    and reducing downtime by 20%
+                  </li>
+                  <li>
+                    Automated database management with Azure and Oracle alarms,
+                    reducing system downtime by 30%
+                  </li>
+                  <li>
+                    Developed scripts for alarm automation using Watchdog,
+                    improving response times by 50% and cutting manual
+                    intervention by half
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="company-logo">
+                <img src="assets/shaab-logo.png" alt="SHAAB TRIP Logo" />
+              </div>
+              <div class="timeline-content">
+                <h4>Web Developer - Intern</h4>
+                <p class="company">SHAAB TRIP</p>
+                <p class="duration">June 2022 - Sep 2022 | Remote</p>
+                <ul>
+                  <li>
+                    Developed a responsive website, boosting user engagement by
+                    15% and decreasing bounce rates by 10%
+                  </li>
+                  <li>
+                    Designed an interactive user interface using HTML, CSS,
+                    Bootstrap, and Tailwind CSS, improving user satisfaction
+                    based on client feedback
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h3 class="resume-section-title">
+              <i class="fas fa-graduation-cap"></i>
+              Education
+            </h3>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="company-logo">
+                <img src="assets/srm.png" alt="SRM University Logo" />
+              </div>
+              <div class="timeline-content">
+                <h4>Bachelor of Technology in Computer Science Engineering</h4>
+                <p class="company">SRM University, Andhra Pradesh, India</p>
+                <p class="duration">2020 - 2024</p>
+                <p class="grade">CGPA: 8.65</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-download">
+          <a href="assets/resume.pdf" class="download-btn" download>
+            <i class="fas fa-download"></i>
+            Download Resume
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">
-                Throughout my academic and professional journey, I have worked on diverse projects focusing on 
-                software development, DevOps, and cloud infrastructure. Each project reflects my ability to solve 
-                complex technical problems and deliver high-quality, maintainable solutions.
-            </p>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <div class="project-meta">
-                            <h3>Assignment Submission Portal</h3>
-                            <p class="project-date">June - Aug 2024</p>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <p>
-                            Developed a full-stack assignment submission portal using Node.js, Express.js, and MongoDB, 
-                            implementing role-based access control for administrators and users. Designed RESTful APIs 
-                            to manage user authentication, assignment submissions, and admin approvals.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Mongoose</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/naveenkalluri1410/assignment-submission-portal" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          Throughout my academic and professional journey, I have worked on
+          diverse projects focusing on software development, DevOps, and cloud
+          infrastructure. Each project reflects my ability to solve complex
+          technical problems and deliver high-quality, maintainable solutions.
+        </p>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="project-meta">
-                            <h3>Database Access Automation</h3>
-                            <p class="project-date">June - Aug 2024</p>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <p>
-                            Developed an automation script using a .pgpass file, increasing user login efficiency by 40% 
-                            by eliminating manual password entry. Reduced system load by automatically deleting inactive 
-                            users after 30-60 minutes, enhancing overall system performance by 15%.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Automation</span>
-                            <span class="tech-tag">Scripting</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/naveenkalluri1/Database-Access-Automation" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <div class="project-meta">
-                            <h3>Reinforcement Learning in Healthcare</h3>
-                            <p class="project-date">Feb - May 2024</p>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <p>
-                            Optimized treatment plans using reinforcement learning, reducing healthcare costs by 10% 
-                            and improving patient outcomes by 15%. Ensured regulatory compliance throughout the project, 
-                            maintaining 100% adherence to healthcare policies.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Reinforcement Learning</span>
-                            <span class="tech-tag">Healthcare</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/naveenkalluri1410/Reinforcement-in-HealthCare" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        <div class="project-meta">
-                            <h3>Online Courier Service</h3>
-                            <p class="project-date">Jan - Feb 2024</p>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <p>
-                            Developed a responsive courier service website, boosting user engagement by 15% and 
-                            decreasing bounce rates by 10%. Designed an interactive user interface using modern 
-                            web technologies, improving user satisfaction based on client feedback.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Bootstrap</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/naveenkalluri1410/Courier-Service-JSP" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="project-meta">
-                            <h3>Restaurant Managing Website</h3>
-                            <p class="project-date">Jan - Mar 2023</p>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <p>
-                            Full-stack restaurant management system utilizing the MERN stack (MongoDB, Express.js, 
-                            React.js, Node.js). Features include order management, menu administration, and customer 
-                            relationship management with responsive design.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Express.js</span>
-                            <span class="tech-tag">React.js</span>
-                            <span class="tech-tag">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/naveenkalluri1410/Restaurant-Managing-Website" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            GitHub
-                        </a>
-                    </div>
-                </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <div class="project-meta">
+                <h3>Assignment Submission Portal</h3>
+                <p class="project-date">June - Aug 2024</p>
+              </div>
             </div>
+            <div class="project-content">
+              <p>
+                Developed a full-stack assignment submission portal using
+                Node.js, Express.js, and MongoDB, implementing role-based access
+                control for administrators and users. Designed RESTful APIs to
+                manage user authentication, assignment submissions, and admin
+                approvals.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Mongoose</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/naveenkalluri1410/assignment-submission-portal"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="project-meta">
+                <h3>Database Access Automation</h3>
+                <p class="project-date">June - Aug 2024</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Developed an automation script using a .pgpass file, increasing
+                user login efficiency by 40% by eliminating manual password
+                entry. Reduced system load by automatically deleting inactive
+                users after 30-60 minutes, enhancing overall system performance
+                by 15%.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Automation</span>
+                <span class="tech-tag">Scripting</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/naveenkalluri1/Database-Access-Automation"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="project-meta">
+                <h3>Reinforcement Learning in Healthcare</h3>
+                <p class="project-date">Feb - May 2024</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Optimized treatment plans using reinforcement learning, reducing
+                healthcare costs by 10% and improving patient outcomes by 15%.
+                Ensured regulatory compliance throughout the project,
+                maintaining 100% adherence to healthcare policies.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Reinforcement Learning</span>
+                <span class="tech-tag">Healthcare</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/naveenkalluri1410/Reinforcement-in-HealthCare"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <div class="project-meta">
+                <h3>Online Courier Service</h3>
+                <p class="project-date">Jan - Feb 2024</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Developed a responsive courier service website, boosting user
+                engagement by 15% and decreasing bounce rates by 10%. Designed
+                an interactive user interface using modern web technologies,
+                improving user satisfaction based on client feedback.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/naveenkalluri1410/Courier-Service-JSP"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="project-meta">
+                <h3>Restaurant Managing Website</h3>
+                <p class="project-date">Jan - Mar 2023</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <p>
+                Full-stack restaurant management system utilizing the MERN stack
+                (MongoDB, Express.js, React.js, Node.js). Features include order
+                management, menu administration, and customer relationship
+                management with responsive design.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/naveenkalluri1410/Restaurant-Managing-Website"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="fab fa-github"></i>
+                GitHub
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Achievements Section -->
     <section id="achievements">
-        <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <p class="section-subtitle">
-                Throughout my journey, I have accomplished various milestones that reflect my dedication 
-                and skill in my field. Below are some notable achievements:
-            </p>
-            
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>170+ LeetCode Problems Solved</h3>
-                    <p>Consistently solving algorithmic problems to enhance problem-solving skills and programming proficiency.</p>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>8.65 CGPA</h3>
-                    <p>Graduated with honors from SRM University, maintaining excellent academic performance throughout B.Tech CSE.</p>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Successful Internship</h3>
-                    <p>Completed a productive internship at Practo Technologies, contributing to significant system improvements.</p>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>10+ Technical Projects</h3>
-                    <p>Developed diverse projects spanning web development, machine learning, and DevOps automation.</p>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Achievements</h2>
+        <p class="section-subtitle">
+          Throughout my journey, I have accomplished various milestones that
+          reflect my dedication and skill in my field. Below are some notable
+          achievements:
+        </p>
+
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-code"></i>
             </div>
+            <h3>170+ LeetCode Problems Solved</h3>
+            <p>
+              Consistently solving algorithmic problems to enhance
+              problem-solving skills and programming proficiency.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h3>8.65 CGPA</h3>
+            <p>
+              Graduated with honors from SRM University, maintaining excellent
+              academic performance throughout B.Tech CSE.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Successful Internship</h3>
+            <p>
+              Completed a productive internship at Practo Technologies,
+              contributing to significant system improvements.
+            </p>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3>10+ Technical Projects</h3>
+            <p>
+              Developed diverse projects spanning web development, machine
+              learning, and DevOps automation.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="section-subtitle">
-                I'm always open to connecting and collaborating. Whether you have questions, want to discuss 
-                opportunities, or just want to say hello, feel free to reach out. Let's start a conversation!
-            </p>
-            
-            <div class="contact-content">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">
-                                <i class="fas fa-user"></i>
-                                Name
-                            </label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">
-                                <i class="fas fa-envelope"></i>
-                                Email
-                            </label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">
-                                <i class="fas fa-tag"></i>
-                                Subject
-                            </label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">
-                                <i class="fas fa-comment"></i>
-                                Message
-                            </label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>
-                                <a href="mailto:naveenkumarkalluri341@gmail.com" class="contact-link">
-                                    naveenkumarkalluri341@gmail.com
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Guntur, Andhra Pradesh, India</p>
-                            <iframe
-                                src="https://www.openstreetmap.org/export/embed.html?bbox=80.3782%2C16.3067%2C80.4782%2C16.4067&amp;layer=mapnik"
-                                style="width:100%;height:120px;border-radius:10px;border:1px solid #eee;margin-top:8px;"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>GitHub</h4>
-                            <p>
-                                <a href="https://https://github.com/naveenkalluri1" class="contact-link" target="_blank">
-                                    github.com/naveenkalluri1
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>LinkedIn</h4>
-                            <p>
-                                <a href="https://www.linkedin.com/in/naveenkumar-kalluri-3b7709224/" class="contact-link" target="_blank">
-                                    Click to Connect with me on LinkedIn
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">
+          I'm always open to connecting and collaborating. Whether you have
+          questions, want to discuss opportunities, or just want to say hello,
+          feel free to reach out. Let's start a conversation!
+        </p>
+
+        <div class="contact-content">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">
+                  <i class="fas fa-user"></i>
+                  Name
+                </label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i>
+                  Email
+                </label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">
+                  <i class="fas fa-tag"></i>
+                  Subject
+                </label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment"></i>
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>
+                  <a
+                    href="mailto:naveenkumarkalluri341@gmail.com"
+                    class="contact-link"
+                  >
+                    naveenkumarkalluri341@gmail.com
+                  </a>
+                </p>
+              </div>
             </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Guntur, Andhra Pradesh, India</p>
+                <iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=80.3782%2C16.3067%2C80.4782%2C16.4067&amp;layer=mapnik"
+                  style="
+                    width: 100%;
+                    height: 120px;
+                    border-radius: 10px;
+                    border: 1px solid #eee;
+                    margin-top: 8px;
+                  "
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <p>
+                  <a
+                    href="https://https://github.com/naveenkalluri1"
+                    class="contact-link"
+                    target="_blank"
+                  >
+                    github.com/naveenkalluri1
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/naveenkumar-kalluri-3b7709224/"
+                    class="contact-link"
+                    target="_blank"
+                  >
+                    Click to Connect with me on LinkedIn
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Naveenkumar Kalluri. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2024 Naveenkumar Kalluri. All rights reserved.</p>
+      </div>
     </footer>
 
     <!-- Road path animation with boy on bike -->
     <div class="road-container">
-        <div class="road-path"></div>
-        <div class="bike-boy"></div>
-        <!-- Markers will be added by JavaScript -->
+      <div class="road-path"></div>
+      <div class="bike-boy"></div>
+      <!-- Markers will be added by JavaScript -->
     </div>
 
     <!-- Theme notification popup -->
-    <div class="theme-notification" id="themeNotification" style="display: none;">
-        <div class="theme-notification-icon">
-            <i class="fas fa-lightbulb"></i>
-        </div>
-        <div class="theme-notification-text">
-            <strong>Light & Dark Mode Available!</strong>
-            <p>Toggle the theme using the switch in the navigation bar.</p>
-        </div>
-        <button class="theme-notification-close" id="closeNotification">×</button>
+    <div
+      class="theme-notification"
+      id="themeNotification"
+      style="display: none"
+    >
+      <div class="theme-notification-icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <div class="theme-notification-text">
+        <strong>Light & Dark Mode Available!</strong>
+        <p>Toggle the theme using the switch in the navigation bar.</p>
+      </div>
+      <button class="theme-notification-close" id="closeNotification">×</button>
+    </div>
+
+    <!-- Background Music Player -->
+    <div class="audio-player">
+      <audio id="backgroundMusic" loop>
+        <source src="assets/background-music.mp3" type="audio/mpeg" />
+      </audio>
+      <button id="musicToggle" class="music-toggle">
+        <i class="fas fa-volume-mute" id="muteIcon"></i>
+        <i class="fas fa-volume-up" id="volumeIcon" style="display: none"></i>
+      </button>
     </div>
 
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -235,3 +235,68 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Background Music Player - Enhanced autoplay
+document.addEventListener('DOMContentLoaded', function() {
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const musicToggle = document.getElementById('musicToggle');
+    const muteIcon = document.getElementById('muteIcon');
+    const volumeIcon = document.getElementById('volumeIcon');
+    
+    // Check if user has a saved preference
+    const musicPreference = localStorage.getItem('musicPreference');
+    
+    // Set initial volume to a lower, less intrusive level
+    backgroundMusic.volume = 0.2;
+    
+    // Function to play music
+    function playMusic() {
+        backgroundMusic.play().then(() => {
+            // Success - update UI
+            musicToggle.classList.add('playing');
+            muteIcon.style.display = 'none';
+            volumeIcon.style.display = 'inline-block';
+            localStorage.setItem('musicPreference', 'on');
+        }).catch(err => {
+            console.log('Autoplay prevented by browser, waiting for interaction');
+        });
+    }
+    
+    // Try to autoplay immediately (likely will be blocked)
+    if (musicPreference !== 'off') {
+        playMusic();
+    } else {
+        // User previously turned off music
+        muteIcon.style.display = 'inline-block';
+        volumeIcon.style.display = 'none';
+    }
+    
+    // Listen for ANY user interaction with the page
+    const interactions = ['click', 'touchstart', 'keydown', 'scroll', 'mousemove'];
+    
+    interactions.forEach(event => {
+        document.addEventListener(event, function() {
+            // Play music if it's paused and user hasn't explicitly turned it off
+            if (backgroundMusic.paused && musicPreference !== 'off') {
+                playMusic();
+            }
+        }, { once: true }); // Only trigger once for the first interaction
+    });
+    
+    // Toggle button functionality
+    if (musicToggle) {
+        musicToggle.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent this click from triggering the document event listeners
+            
+            if (backgroundMusic.paused) {
+                playMusic();
+                localStorage.setItem('musicPreference', 'on');
+            } else {
+                backgroundMusic.pause();
+                musicToggle.classList.remove('playing');
+                muteIcon.style.display = 'inline-block';
+                volumeIcon.style.display = 'none';
+                localStorage.setItem('musicPreference', 'off');
+            }
+        });
+    }
+});
