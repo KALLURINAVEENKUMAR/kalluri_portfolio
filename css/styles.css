@@ -3174,3 +3174,13 @@ body.dark .contact-item:hover .contact-icon {
   transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
   background: #181c22;
 }
+
+.profile-photo {
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1);
+  will-change: transform;
+}
+.profile-photo.scaled-up {
+  transform: scale(2.2); /* Adjust scale as needed */
+  z-index: 100;
+  box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+}

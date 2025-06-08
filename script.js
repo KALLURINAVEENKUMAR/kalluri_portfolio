@@ -282,25 +282,22 @@ function showToast(message, type = "success") {
 
 document.addEventListener('DOMContentLoaded', function() {
   const profilePhoto = document.querySelector('.profile-photo');
-  const zoomModal = document.getElementById('profileZoomModal');
+  if (!profilePhoto) return;
 
-  function showZoom(e) {
+  // Scale up on touchstart/mousedown
+  function scaleUp(e) {
     e.preventDefault();
-    zoomModal.classList.add('active');
+    profilePhoto.classList.add('scaled-up');
   }
-  function hideZoom(e) {
-    e.preventDefault();
-    zoomModal.classList.remove('active');
+  // Scale back on touchend/touchcancel/mouseup/mouseleave
+  function scaleDown(e) {
+    profilePhoto.classList.remove('scaled-up');
   }
 
-  if (profilePhoto && zoomModal) {
-    // Show on click or touchstart
-    profilePhoto.addEventListener('click', showZoom);
-    profilePhoto.addEventListener('touchstart', showZoom);
-
-    // Hide on click, touchend, or mouseup anywhere on modal
-    zoomModal.addEventListener('click', hideZoom);
-    zoomModal.addEventListener('touchend', hideZoom);
-    zoomModal.addEventListener('mouseup', hideZoom);
-  }
+  profilePhoto.addEventListener('touchstart', scaleUp);
+  profilePhoto.addEventListener('touchend', scaleDown);
+  profilePhoto.addEventListener('touchcancel', scaleDown);
+  profilePhoto.addEventListener('mousedown', scaleUp);
+  profilePhoto.addEventListener('mouseup', scaleDown);
+  profilePhoto.addEventListener('mouseleave', scaleDown);
 });
