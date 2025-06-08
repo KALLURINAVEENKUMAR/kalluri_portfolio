@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <style>
     body {
-      background: linear-gradient(135deg, #45A29E 0%, #66FCF1 100%);
+      background: #181c22; /* Light black */
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -16,13 +16,13 @@
       position: relative;
     }
     .success-container {
-      background: #fff;
+      background: #23272f;
       border-radius: 24px;
       box-shadow: 0 8px 32px rgba(52,152,219,0.18);
       padding: 2.5rem 2rem;
       text-align: center;
       max-width: 400px;
-      width: 100%;
+      width: 95vw;
       position: relative;
       z-index: 2;
     }
@@ -39,7 +39,7 @@
     }
     .success-message {
       font-size: 1.2rem;
-      color: #23272f;
+      color: #ffffff;
       margin-bottom: 1.2rem;
       font-weight: 500;
     }
@@ -79,6 +79,16 @@
         opacity: 0;
       }
     }
+
+    @media (max-width: 600px) {
+      .success-container {
+        padding: 1.2rem 0.5rem;
+        max-width: 98vw;
+      }
+      .success-tick {
+        font-size: 2.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -105,20 +115,21 @@
     document.getElementById('timestamp').textContent =
       "Sent at: " + now.toLocaleString();
 
-    // Smile emoji animation
+    // Smile emoji animation - instant and more frequent
     function createSmile() {
       const smile = document.createElement('div');
       smile.className = 'smile-emoji';
       smile.textContent = ['😊','😁','😃','😄','😆','😎','🥳'][Math.floor(Math.random()*7)];
       smile.style.left = Math.random() * 100 + 'vw';
       smile.style.fontSize = (1.5 + Math.random() * 2.5) + 'rem';
-      smile.style.animationDuration = (3 + Math.random() * 2) + 's';
+      smile.style.animationDuration = (2 + Math.random() * 1.5) + 's';
       document.body.appendChild(smile);
-      setTimeout(() => smile.remove(), 5000);
+      setTimeout(() => smile.remove(), 3000);
     }
-    setInterval(createSmile, 350);
-    // Initial burst
-    for(let i=0;i<8;i++) setTimeout(createSmile, i*200);
+    // Burst of smileys instantly
+    for(let i=0;i<18;i++) setTimeout(createSmile, i*80);
+    // Continue with more frequent smileys
+    setInterval(createSmile, 1);
   </script>
 </body>
 </html>
