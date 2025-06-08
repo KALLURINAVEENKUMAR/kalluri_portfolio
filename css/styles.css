@@ -2964,47 +2964,49 @@ body.dark .profile-card {
     z-index: 1;
 }
 
-/* Achievement Cards Light Mode Fix */
-#achievements {
-    color: var(--text-color);
-    background: var(--bg-color);
+
+/* Remove all effects from contact-content */
+#contact .contact-content,
+#contact .contact-form,
+#contact .contact-info,
+#contact .contact-item,
+#contact .glass-card {
+    /* Remove 3D effects */
+    transform: none !important;
+    transform-style: flat !important;
+    perspective: none !important;
+    backface-visibility: visible !important;
+    
+    /* Remove transitions and animations */
+    transition: none !important;
+    animation: none !important;
+    
+    /* Remove shadows and glows */
+    box-shadow: 0 5px 15px var(--shadow) !important;
+    text-shadow: none !important;
+    
+    /* Prevent hover effects */
+    pointer-events: auto;
 }
 
-#achievements .section-title,
-#achievements .section-subtitle {
-    color: var(--text-color);
+/* Remove hover transformations */
+#contact .contact-content *:hover,
+#contact .contact-form:hover,
+#contact .contact-info:hover,
+#contact .contact-item:hover,
+#contact .glass-card:hover {
+    transform: none !important;
+    box-shadow: 0 5px 15px var(--shadow) !important;
+    animation: none !important;
 }
 
-#achievements .achievement-card {
-    background: var(--card-bg);
-    color: var(--text-color);
+/* Remove the tilting class effects entirely */
+#contact .tilting::before,
+#contact .contact-item.tilting::before {
+    display: none !important;
 }
 
-#achievements .achievement-card h3 {
-    color: var(--heading-color);
-}
-
-#achievements .achievement-card p {
-    color: var(--text-color);
-}
-
-#achievements .achievement-icon i {
-    color: var(--accent-color);
-}
-
-/* Keep dark mode as is */
-body.dark #achievements {
-    color: #fff;
-}
-
-body.dark #achievements .achievement-card {
-    background: rgba(25, 29, 43, 0.85);
-}
-
-body.dark #achievements .achievement-card h3 {
-    color: #fff;
-}
-
-body.dark #achievements .achievement-card p {
-    color: rgba(255, 255, 255, 0.8);
+/* Keep normal styles without effects */
+#contact .contact-item {
+    border: 1px solid var(--border-color);
 }

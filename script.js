@@ -151,87 +151,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Contact Form Submission with EmailJS
+// EmailJS Contact Form Submission
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize EmailJS
-    emailjs.init("Naveenkumar Kalluri"); // Replace with your actual EmailJS user ID
-    
-    // Get the contact form
+    // Initialize EmailJS with your public key
+    emailjs.init('KCv25K18acrxF56er'); // Replace with your real public key
+
     const contactForm = document.getElementById('contactForm');
-    
-    // Form submission handler
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Show loading state
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Optionally, show a loading state on the submit button
             const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalBtnText = submitBtn.innerHTML;
+            const oldBtnText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
-            // Get form data
+
+            // Collect data
             const formData = {
-                name: contactForm.elements.name.value,
-                email: contactForm.elements.email.value,
-                subject: contactForm.elements.subject.value,
-                message: contactForm.elements.message.value
+                from_name: contactForm.name.value,
+                from_email: contactForm.email.value,
+                subject: contactForm.subject.value,
+                message: contactForm.message.value
             };
-            
-            // Send email using EmailJS
-            emailjs.send(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-                {
-                    from_name: formData.name,
-                    from_email: formData.email,
-                    subject: formData.subject,
-                    message: formData.message
-                }
-            )
+
+            emailjs.send('service_zld8ugb', 'template_pxa3k1a', formData)
             .then(function() {
-                // Show success message
-                showFormMessage('success', 'Your message has been sent successfully!');
-                
-                // Reset the form
+                alert('Message sent successfully!');
                 contactForm.reset();
-            })
-            .catch(function(error) {
-                // Show error message
-                console.error('Email sending failed:', error);
-                showFormMessage('error', 'Sorry, there was a problem sending your message.');
+            }, function(error) {
+                alert('Failed to send message. Please try again later.');
+                console.error(error);
             })
             .finally(function() {
-                // Restore button state
-                submitBtn.innerHTML = originalBtnText;
+                submitBtn.innerHTML = oldBtnText;
                 submitBtn.disabled = false;
             });
         });
-    }
-    
-    // Function to show form feedback message
-    function showFormMessage(type, message) {
-        // Create message element if it doesn't exist
-        let messageEl = document.getElementById('formMessage');
-        if (!messageEl) {
-            messageEl = document.createElement('div');
-            messageEl.id = 'formMessage';
-            contactForm.insertAdjacentElement('afterend', messageEl);
-        }
-        
-        // Set message content and style
-        messageEl.className = `form-message ${type}`;
-        messageEl.innerHTML = message;
-        messageEl.style.display = 'block';
-        
-        // Auto-hide message after 5 seconds
-        setTimeout(() => {
-            messageEl.style.opacity = '0';
-            setTimeout(() => {
-                messageEl.style.display = 'none';
-                messageEl.style.opacity = '1';
-            }, 500);
-        }, 5000);
     }
 });
 
