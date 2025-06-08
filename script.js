@@ -109,43 +109,43 @@ document.addEventListener('DOMContentLoaded', function() {
 // 3D Tilt Effect on Elements
 document.addEventListener('DOMContentLoaded', function() {
     // Select all elements that should have the 3D effect
-    const tiltElements = document.querySelectorAll('.project-card, .achievement-card, .skills-category, .contact-item, .info-item, .glass-card');
-    
+    const tiltElements = document.querySelectorAll('.project-card, .achievement-card, .skills-category, .contact-item, .info-item, .glass-card'); // <-- removed .profile-card
+
     // Add event listeners to each element
     tiltElements.forEach(element => {
         element.addEventListener('mouseenter', startTiltEffect);
         element.addEventListener('mouseleave', resetTiltEffect);
         element.addEventListener('mousemove', tiltEffect);
     });
-    
+
     // Start tilt effect
     function startTiltEffect() {
         this.style.transition = 'transform 0.1s ease';
         this.classList.add('tilting');
     }
-    
+
     // Reset position when mouse leaves
     function resetTiltEffect() {
         this.style.transition = 'transform 0.5s ease';
         this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
         this.classList.remove('tilting');
     }
-    
+
     // Calculate and apply tilt based on mouse position
     function tiltEffect(e) {
         if (!this.classList.contains('tilting')) return;
-        
+
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left; // X position within the element
         const y = e.clientY - rect.top; // Y position within the element
-        
+
         const width = rect.width;
         const height = rect.height;
-        
+
         // Calculate tilt rotation (max 10 degrees)
         const tiltX = ((y / height) * 2 - 1) * -10; // Reverse Y-axis for natural tilt
         const tiltY = ((x / width) * 2 - 1) * 10;
-        
+
         // Apply transform with slight scale and translateZ for depth
         this.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(10px) scale(1.03)`;
     }

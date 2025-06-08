@@ -3184,3 +3184,23 @@ body.dark .contact-item:hover .contact-icon {
   z-index: 100;
   box-shadow: 0 8px 32px rgba(52,152,219,0.18);
 }
+
+.profile-card {
+    transform: perspective(800px) rotateY(-15deg) rotateX(10deg);
+    /* ... */
+    transition: all 0.4s ease;
+    transform-style: preserve-3d;
+}
+.profile-card:hover {
+    transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.03);
+}
+
+
+/* Remove 3D/tilt effect from profile-card */
+.profile-card,
+.profile-card:hover,
+.profile-card:active,
+.profile-card.tilting {
+    transform: none !important;
+    transition: box-shadow 0.3s, background 0.3s;
+}
