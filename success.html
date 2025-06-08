@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Message Sent Successfully</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #45A29E 0%, #66FCF1 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .success-container {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .success-tick {
+      font-size: 4rem;
+      color: #45A29E;
+      margin-bottom: 1rem;
+      animation: pop 0.5s;
+    }
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      80% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+    .success-message {
+      font-size: 1.2rem;
+      color: #23272f;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+    .success-timestamp {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    .success-footer {
+      font-size: 1.1rem;
+      color: #45A29E;
+      margin-top: 1.5rem;
+      font-weight: 600;
+    }
+    /* Smiley animation */
+    .smile-emoji {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.7;
+      animation: floatSmile 4s linear infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes floatSmile {
+      0% {
+        transform: translateY(100vh) scale(0.7) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.7;
+      }
+      80% {
+        opacity: 0.7;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Smile emojis will be injected here -->
+  <div class="success-container">
+    <div class="success-tick">✅</div>
+    <div class="success-message" id="successMessage">
+      Hey <span id="userName">there</span>, Hope you have a nice day.<br>
+      I have received the message and will get in touch with you soon asap.
+    </div>
+    <div class="success-timestamp" id="timestamp"></div>
+    <div class="success-footer">😊😊😊</div>
+  </div>
+  <script>
+    // Get name from URL if present
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    if (name) {
+      document.getElementById('userName').textContent = name;
+    }
+
+    // Set timestamp
+    const now = new Date();
+    document.getElementById('timestamp').textContent =
+      "Sent at: " + now.toLocaleString();
+
+    // Smile emoji animation
+    function createSmile() {
+      const smile = document.createElement('div');
+      smile.className = 'smile-emoji';
+      smile.textContent = ['😊','😁','😃','😄','😆','😎','🥳'][Math.floor(Math.random()*7)];
+      smile.style.left = Math.random() * 100 + 'vw';
+      smile.style.fontSize = (1.5 + Math.random() * 2.5) + 'rem';
+      smile.style.animationDuration = (3 + Math.random() * 2) + 's';
+      document.body.appendChild(smile);
+      setTimeout(() => smile.remove(), 5000);
+    }
+    setInterval(createSmile, 350);
+    // Initial burst
+    for(let i=0;i<8;i++) setTimeout(createSmile, i*200);
+  </script>
+</body>
+</html>

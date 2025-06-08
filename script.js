@@ -184,9 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 email: email,
                 message: `Subject: ${subject}\n\n${message}`
             }).then(function(response) {
-                showToast("✅ Message sent successfully!", "success");
-                contactForm.reset();
-                console.log("Form Email Sent!", response);
+                // Redirect to success page with name in query string
+                window.location.href = "success.html?name=" + encodeURIComponent(name);
             }, function(error) {
                 showToast("❌ Failed to send message.", "error");
                 console.log("Failed to send form email.", error);
