@@ -278,3 +278,29 @@ function showToast(message, type = "success") {
 // document.addEventListener('contextmenu', function(e) {
 //     e.preventDefault();
 // });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const profilePhoto = document.querySelector('.profile-photo');
+  const zoomModal = document.getElementById('profileZoomModal');
+
+  function showZoom(e) {
+    e.preventDefault();
+    zoomModal.classList.add('active');
+  }
+  function hideZoom(e) {
+    e.preventDefault();
+    zoomModal.classList.remove('active');
+  }
+
+  if (profilePhoto && zoomModal) {
+    // Show on click or touchstart
+    profilePhoto.addEventListener('click', showZoom);
+    profilePhoto.addEventListener('touchstart', showZoom);
+
+    // Hide on click, touchend, or mouseup anywhere on modal
+    zoomModal.addEventListener('click', hideZoom);
+    zoomModal.addEventListener('touchend', hideZoom);
+    zoomModal.addEventListener('mouseup', hideZoom);
+  }
+});

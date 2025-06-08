@@ -3144,3 +3144,33 @@ body.dark .contact-item:hover .contact-icon {
         border-radius: 18px;
     }
 }
+
+
+
+.profile-zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(24,28,34,0.95);
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.profile-zoom-modal.active {
+  display: flex;
+  animation: fadeIn 0.25s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.zoomed-profile-photo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  background: #181c22;
+}
