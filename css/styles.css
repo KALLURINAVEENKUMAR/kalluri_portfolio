@@ -3011,44 +3011,136 @@ body.dark #achievements .achievement-card p {
 #contact .contact-content,
 #contact .contact-form,
 #contact .contact-info,
-#contact .contact-item,
-#contact .glass-card {
-    /* Remove 3D effects */
+#contact .contact-item {
     transform: none !important;
-    transform-style: flat !important;
-    perspective: none !important;
-    backface-visibility: visible !important;
-    
-    /* Remove transitions and animations */
+    box-shadow: none !important;
     transition: none !important;
     animation: none !important;
-    
-    /* Remove shadows and glows */
-    box-shadow: 0 5px 15px var(--shadow) !important;
+}
+/* Clean, simple contact icons */
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #f3f6fa; /* Light gray for light mode */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    box-shadow: none;
+    margin-right: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.contact-item:hover .contact-icon {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+body.dark .contact-icon {
+    background: #23272f;
+    color: #66FCF1;
+}
+
+body.dark .contact-item:hover .contact-icon {
+    background: #66FCF1;
+    color: #0B0C10;
+}
+
+/* Remove any text-shadow or glow from icons */
+.contact-icon i {
     text-shadow: none !important;
-    
-    /* Prevent hover effects */
+    filter: none !important;
+}
+
+
+/* Logo click (active) effect */
+.logo:active,
+.logo:focus {
+    color: #45A29E !important; /* Teal accent, matches your theme */
+    filter: brightness(1.2) drop-shadow(0 0 8px #45A29E);
+    outline: none;
+    transition: color 0.1s, filter 0.1s;
+}
+
+/* If your logo uses a .highlight span inside */
+.logo .highlight:active,
+.logo .highlight:focus {
+    background: linear-gradient(90deg, #45A29E 0%, #66FCF1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: brightness(1.2) drop-shadow(0 0 8px #45A29E);
+    outline: none;
+    transition: background 0.1s, filter 0.1s;
+}
+
+
+/* Logo click (active) effect - solid, clearly visible color */
+
+.logo:active,
+.logo:focus {
+    color: #fff !important; /* Solid white for high contrast */
+    background: #45A29E !important; /* Teal background for visibility */
+    border-radius: 10px;
+    filter: none !important;
+    outline: none !important;
+    box-shadow: none !important;   /* No glow */
+    transition: color 0.1s, background 0.1s;
+}
+
+.logo .highlight:active,
+.logo .highlight:focus {
+    background: none !important;
+    color: #45A29E !important;
+    -webkit-text-fill-color: #45A29E !important;
+    filter: none !important;
+    outline: none !important;
+    box-shadow: none !important;   /* No glow */
+    transition: color 0.1s;
+}
+
+
+.toast-notification {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) scale(0.95);
+    min-width: 220px;
+    max-width: 90vw;
+    background: #23272f;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px rgba(52,152,219,0.18);
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.4s, transform 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.toast-notification.show {
+    opacity: 1;
     pointer-events: auto;
+    transform: translateX(-50%) scale(1);
 }
-
-/* Remove hover transformations */
-#contact .contact-content *:hover,
-#contact .contact-form:hover,
-#contact .contact-info:hover,
-#contact .contact-item:hover,
-#contact .glass-card:hover {
-    transform: none !important;
-    box-shadow: 0 5px 15px var(--shadow) !important;
-    animation: none !important;
+.toast-notification.success {
+    background: linear-gradient(90deg, #45A29E 0%, #66FCF1 100%);
+    color: #0B0C10;
 }
-
-/* Remove the tilting class effects entirely */
-#contact .tilting::before,
-#contact .contact-item.tilting::before {
-    display: none !important;
+.toast-notification.error {
+    background: #ff3b3b;
+    color: #fff;
 }
-
-/* Keep normal styles without effects */
-#contact .contact-item {
-    border: 1px solid var(--border-color);
+@media (max-width: 600px) {
+    .toast-notification {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 18px;
+    }
 }

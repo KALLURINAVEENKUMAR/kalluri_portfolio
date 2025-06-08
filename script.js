@@ -184,11 +184,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 email: email,
                 message: `Subject: ${subject}\n\n${message}`
             }).then(function(response) {
-                alert("Message sent successfully!");
+                showToast("✅ Message sent successfully!", "success");
                 contactForm.reset();
                 console.log("Form Email Sent!", response);
             }, function(error) {
-                alert("Failed to send message.");
+                showToast("❌ Failed to send message.", "error");
                 console.log("Failed to send form email.", error);
             });
         });
@@ -260,3 +260,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Toast notification function
+function showToast(message, type = "success") {
+    const toast = document.getElementById("toast");
+    if (!toast) return;
+    toast.textContent = message;
+    toast.className = "toast-notification " + type;
+    setTimeout(() => {
+        toast.classList.add("show");
+    }, 50);
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000); // Toast visible for 3 seconds
+}
+
+// Disable right-click context menu
+// document.addEventListener('contextmenu', function(e) {
+//     e.preventDefault();
+// });
