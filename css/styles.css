@@ -2964,7 +2964,49 @@ body.dark .profile-card {
     z-index: 1;
 }
 
+/* Achievement Cards Light Mode Fix */
+#achievements {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
 
+#achievements .section-title,
+#achievements .section-subtitle {
+    color: var(--text-color);
+}
+
+#achievements .achievement-card {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+#achievements .achievement-card h3 {
+    color: var(--accent-color);
+}
+
+#achievements .achievement-icon i {
+    color: var(--accent-color);
+}
+
+/* Keep dark mode styles intact */
+body.dark #achievements {
+    background: linear-gradient(135deg, #1F2833 0%, #45A29E 100%);
+    color: #fff;
+}
+
+body.dark #achievements .achievement-card {
+    background: rgba(31, 40, 51, 0.7);
+    border: 1px solid #45A29E;
+}
+
+body.dark #achievements .achievement-card h3 {
+    color: #66FCF1;
+}
+
+body.dark #achievements .achievement-card p {
+    color: rgba(255, 255, 255, 0.8);
+}
 /* Remove all effects from contact-content */
 #contact .contact-content,
 #contact .contact-form,

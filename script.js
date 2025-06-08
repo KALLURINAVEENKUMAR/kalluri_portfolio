@@ -151,41 +151,45 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// EmailJS Contact Form Submission
-document.addEventListener('DOMContentLoaded', function() {
+// EmailJS Contact Form Submission (using your provided keys and structure)
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof emailjs === "undefined") {
+        console.error("EmailJS is not loaded. Make sure the script is included in index.html.");
+        return;
+    }
+
     // Initialize EmailJS with your public key
-    emailjs.init('KCv25K18acrxF56er'); // Replace with your real public key
+    emailjs.init("KCv25K18acrxF56er"); // Replace with your actual Public Key
 
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.getElementById("contactForm");
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-            // Optionally, show a loading state on the submit button
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const oldBtnText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
+            // Collect form data
+            const name = contactForm.name.value.trim();
+            const email = contactForm.email.value.trim();
+            const subject = contactForm.subject.value.trim();
+            const message = contactForm.message.value.trim();
 
-            // Collect data
-            const formData = {
-                from_name: contactForm.name.value,
-                from_email: contactForm.email.value,
-                subject: contactForm.subject.value,
-                message: contactForm.message.value
-            };
+            if (!name || !email || !subject || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
 
-            emailjs.send('service_zld8ugb', 'template_pxa3k1a', formData)
-            .then(function() {
-                alert('Message sent successfully!');
+            // Send Email with Form Data
+            emailjs.send("service_zld8ugb", "template_pxa3k1a", {
+                to_name: "Naveen",
+                name: name,
+                email: email,
+                message: `Subject: ${subject}\n\n${message}`
+            }).then(function(response) {
+                alert("Message sent successfully!");
                 contactForm.reset();
+                console.log("Form Email Sent!", response);
             }, function(error) {
-                alert('Failed to send message. Please try again later.');
-                console.error(error);
-            })
-            .finally(function() {
-                submitBtn.innerHTML = oldBtnText;
-                submitBtn.disabled = false;
+                alert("Failed to send message.");
+                console.log("Failed to send form email.", error);
             });
         });
     }
